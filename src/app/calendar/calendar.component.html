@@ -1,0 +1,21 @@
+<div class="calendar">
+  <div class="header">
+    <button (click)="goToPreviousMonth()">Previous</button>
+    <h2>{{ selectedDate | date: 'MMMM y' }}</h2>
+    <button (click)="goToNextMonth()">Next</button>
+  </div>
+  <div class="days">
+    <div *ngFor="let day of daysInMonth">
+      <div
+        class="day"
+        [ngClass]="{
+          'selected': day.date && day.date.getTime() === selectedDate.getTime(),
+          'today': day.date && day.date.toDateString() === today.toDateString()
+        }"
+        (click)="selectDate(day.date)"
+      >
+        {{ day.number }}
+      </div>
+    </div>
+  </div>
+</div>

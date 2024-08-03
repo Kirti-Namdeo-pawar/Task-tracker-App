@@ -1,0 +1,11 @@
+<div>
+    <p>Title: {{ task.title }}</p>
+    <p>Start Date: {{ task.startDate | date }}</p>
+    <p>End Date: {{ task.endDate | date }}</p>
+    <p *ngIf="timerActive">Time Remaining: {{ formatRemainingTime() }}</p>
+    <button (click)="startTimer()">Start</button>
+    <button (click)="resetTimer()">Reset</button>
+    <button (click)="pauseTimer()">Pause</button>
+    <button (click)="deleteTask()">Delete</button>
+  </div>
+  

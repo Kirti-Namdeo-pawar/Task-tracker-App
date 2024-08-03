@@ -1,0 +1,21 @@
+<div class="task-form">
+    <input [(ngModel)]="newTask.title" placeholder="New Task" />
+    
+    <div>
+      <label>Hours:</label>
+      <input type="number" [(ngModel)]="hours" min="0" placeholder="HH" />
+      <label>Minutes:</label>
+      <input type="number" [(ngModel)]="minutes" min="0" max="59" placeholder="MM" />
+      <label>Seconds:</label>
+      <input type="number" [(ngModel)]="seconds" min="0" max="59" placeholder="SS" />
+    </div>
+    
+    <label>Start Date:</label>
+    <input type="date" [(ngModel)]="newTask.startDate" />
+    
+    <label>End Date:</label>
+    <input type="date" [(ngModel)]="newTask.endDate" />
+    
+    <button (click)="addTask()">Add Task</button>
+  </div>
+  

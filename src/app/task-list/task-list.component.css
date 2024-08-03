@@ -1,0 +1,18 @@
+/* src/app/task-list/task-list.component.css */
+
+ul {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

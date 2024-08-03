@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Initial Timer (HH:MM:SS)</th>
+      <th>Current Timer (HH:MM:SS)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ formatTimer(task.initialTimer) }}</td>
+      <td>{{ formatTimer(task.timer) }}</td>
+      <td>
+        <app-task-item [task]="task"></app-task-item>
+      </td>
+    </tr>
+  </tbody>
+</table>
